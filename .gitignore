@@ -3,12 +3,15 @@
 
 # Log file
 *.log
-
+/node_modules
 # BlueJ files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+.idea
+
+
 
 # Package Files #
 *.jar

@@ -1,0 +1,81 @@
+.nav_bar{
+    background-color: #052541;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: ;
+    justify-content: space-between;
+}
+.nav_bar_1{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav_bar button{
+    font-size: 25px;
+    color: white;
+}
+.nav_bar_2{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 25px;
+    color: white;
+}
+.first_page{
+    margin: 0 70px 0 70px;
+}
+.first_page_header{
+    margin-top: 20px;
+}
+.first_page_header h1{
+    font-weight: 800;
+}
+.header_form{
+    display: flex;
+}
+.header_form Input{
+    height: 50px;
+    border-radius: 50px 50px;
+}
+.header_form Button{
+    border-radius: 50px 50px;
+    background-color: #14c5c6;
+    color: black;
+    height: 50px;
+    width: 150px;
+}
+.first_page_2{
+    margin-top: 20px;
+    display: flex;
+}
+.first_page_streaming_button button{
+    font-size: 27px;
+}
+.first_page_streaming_button{
+    box-sizing: border-box;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 50px 50px;
+}
+.searchbar{
+    margin: 20px;
+}
+.search_page{
+    margin: 0 70px 0 70px
+}
+.ant-card-head-title{
+    color: white;
+    background-color: #04b4e4;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+.search_card_contents{
+    display: flex;
+    justify-content: space-between;
+}
