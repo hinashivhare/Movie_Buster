@@ -29,11 +29,18 @@ class SearchBar extends React.Component {
        return(
            <div className="header_form">
                <input
+                   id="search_input"
                    style={{width: "80%"}}
                    onChange={this.handleOnChange}
                    placeholder = "Search for movies, TV Shows, persons....."
                />
-               <Button type="primary" onClick={this.handleOnClick}>Search</Button>
+               <Button
+                   id="search_button"
+                   type="primary"
+                   onClick={this.handleOnClick}
+               >
+                   Search
+               </Button>
            </div>
        );
    }

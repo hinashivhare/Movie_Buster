@@ -30,10 +30,18 @@
     margin: 0 70px 0 70px;
 }
 .first_page_header{
-    margin-top: 20px;
+    background-image: url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/jTiQAusGG4dVLSb1WHme9I9R4NN.jpg");
+    padding: 40px 40px 10px 40px;
 }
 .first_page_header h1{
-    font-weight: 800;
+    color: white;
+    line-height: 10px;
+    font-size: 90px;
+    font-weight: 700;
+}
+.first_page_header h2{
+    color: white;
+    font-size: 60px;
 }
 .header_form{
     display: flex;
@@ -48,19 +56,6 @@
     color: black;
     height: 50px;
     width: 150px;
-}
-.first_page_2{
-    margin-top: 20px;
-    display: flex;
-}
-.first_page_streaming_button button{
-    font-size: 27px;
-}
-.first_page_streaming_button{
-    box-sizing: border-box;
-    width: 50%;
-    border: 2px solid black;
-    border-radius: 50px 50px;
 }
 .searchbar{
     margin: 20px;
@@ -78,4 +73,28 @@
 .search_card_contents{
     display: flex;
     justify-content: space-between;
+}
+.search_page_inform{
+    font-size: 22px;
+}
+.popular_page{
+    margin-top: 40px;
+    font-weight: 600px;
+    display: flex;
+}
+.whats_popular_streaming_button button{
+    font-size: 27px;
+    border-radius: 50px 50px;
+    height: 51px ;
+}
+.whats_popular_streaming_button{
+    margin-left: 20px;
+    box-sizing: border-box;
+    height: 51px;
+    border: 1px solid black;
+    border-radius: 50px 50px;
+}
+.popular_page_content{
+    display: flex;
+    margin-top: 40px;
 }

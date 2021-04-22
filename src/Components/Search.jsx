@@ -1,6 +1,7 @@
 import React  from "react";
 import {Form} from "antd";
 import { connect} from "react-redux";
+import { InfoCircleFilled } from '@ant-design/icons';
 import { List, Avatar, Row, Col, Card} from 'antd';
 import SearchBar from "./SearchBar";
 
@@ -43,7 +44,13 @@ const Search = (props) => {
                              <p>{props.movies.totalResults.networksCount}</p>
                          </div>
                      </Card>
-                 </div>,
+                 </div>
+                 <div className="search_page_inform">
+                     <p>{<InfoCircleFilled/>} Tip: You can use the 'y:' filter to narrow
+                         your results by year. Example: 'star wars
+                         y:1977'.
+                     </p>
+                 </div>
              </Col>
              <Col span={20}>
                  <List
@@ -52,7 +59,7 @@ const Search = (props) => {
                      renderItem={item => (
                          <List.Item>
                              <List.Item.Meta
-                                 avatar={<Avatar src={item.poster_path} />}
+                                 avatar={<img src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${item.backdrop_path}`} />}
                                  title={<a href="https://ant.design">{item.title}</a>}
                                  description={<div>
                                      <p>{item.release_date}</p>

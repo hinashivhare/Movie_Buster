@@ -1,6 +1,8 @@
 import React from 'react';
 import {Button} from 'antd'
 import SearchBar from "./SearchBar";
+import WhatsPopular from "./FirstPageMovieList/WhatsPopular";
+import GetLatest from "./FirstPageMovieList/GetTrending";
 
 class FirstPage extends React.Component {
     constructor(props) {
@@ -16,15 +18,8 @@ class FirstPage extends React.Component {
                     <h2>Explore now.</h2>
                     <SearchBar/>
                 </div>
-                <div className="first_page_2">
-                    <h3>What's Popular</h3>
-                   <div className="first_page_streaming_button">
-                       <Button type="text">Streaming</Button>
-                       <Button type="text">On TV</Button>
-                       <Button type="text">On Rent</Button>
-                       <Button type="text">In Theaters</Button>
-                   </div>
-                </div>
+                <WhatsPopular/>
+                <GetLatest/>
             </div>
         );
     }

@@ -15,15 +15,54 @@ export const querySearch = query => {
             TVShowsCount: TVShowsResponse.data.total_results,
             peopleCount: peopleResponse.data.total_results,
             companiesCount: companiesResponse.data.total_results,
-            keywordsCount : companiesResponse.data.total_results,
+            keywordsCount: companiesResponse.data.total_results,
             collectionsCount: collectionResponse.data.total_results,
             networkCount: networksResponse.data.total_results
         };
-      //  console.log(data);
         dispatch({
             type: "SEARCH_QUERY",
             payload: data
         })
     }
-
 }
+
+export const popularButtonAction = id => {
+    return async (dispatch) => {
+        let popularResponse;
+        let data;
+        if(id == 1){
+            popularResponse = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=2177adfc6aaa80b7670006d753956300`);
+            data = popularResponse.data.results;
+        }else if(id == 2){
+            popularResponse = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=2177adfc6aaa80b7670006d753956300`);
+            data = popularResponse.data.results;
+        }
+        dispatch({
+            type: 'GET_WHATS_POPULAR',
+            payload: {
+                data : data,
+                id : id
+            }
+        })
+    }
+}
+
+export const trendingAction = id => {
+    return async (dispatch) => {
+        let trendingResponse;
+        let data;
+        if(id == 1){
+            trendingResponse = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=2177adfc6aaa80b7670006d753956300`);
+            data = trendingResponse.data.results;
+        }else if(id == 2){
+            trendingResponse = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=2177adfc6aaa80b7670006d753956300`)
+            data = trendingResponse.data.results
+        }
+       // console.log(data)
+        dispatch({
+            type: 'GET_TRENDING',
+            payload: data
+        })
+    }
+}
+

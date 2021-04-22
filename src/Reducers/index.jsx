@@ -1,6 +1,10 @@
 import { combineReducers} from "redux";
-import FetchReducers from "./FetchReducers";
+import SearchReducer from "./SearchReducer";
+import WhatsPopularReducer from "./WhatsPopularReducer";
+import GetTrendingReducer from "./GetTrendingReducers";
 
 export default combineReducers({
-    movies: FetchReducers
+    movies: SearchReducer,
+    whatsPopular: WhatsPopularReducer,
+    trendingList: GetTrendingReducer
 })
