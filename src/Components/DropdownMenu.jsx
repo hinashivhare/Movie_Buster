@@ -1,5 +1,6 @@
 import React from 'react';
 import {Menu} from "antd";
+import {Link} from "react-router-dom";
 
 const DropdownMenu = ({ name }) => {
     const menuData = {
@@ -10,13 +11,23 @@ const DropdownMenu = ({ name }) => {
     }
 
    const menuList = menuData[name].map(ele => {
-       return(
-           <Menu.Item>
-               <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                   {ele}
-               </a>
-           </Menu.Item>
-       );
+       if(ele == 'Popular People'){
+           return(
+               <Menu.Item>
+                  <Link to='/person'>
+                      {ele}
+                  </Link>
+               </Menu.Item>
+           );
+       }else{
+           return(
+               <Menu.Item>
+                   <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                       {ele}
+                   </a>
+               </Menu.Item>
+           );
+       }
    })
 
  return(

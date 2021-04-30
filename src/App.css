@@ -98,3 +98,28 @@
     display: flex;
     margin-top: 40px;
 }
+.popular_person_page{
+    margin: 30px 70px 0 70px;
+}
+.popular_person{
+   display: inline-flex;
+    flex-grow: 5;
+    flex-wrap: wrap;
+}
+.popular_person_pagination{
+    width: 100%;
+    margin: 20px 0px 40px 700px;
+}
+.person_details_page{
+    margin: 0 60px 0 60px;
+}
+.Person_details_menu Button{
+    font-size: 35px;
+    margin-right: 20px;
+
+}
+.Person_details_menu{
+    border-bottom: black solid 1px;
+    text-align: center;
+
+}
