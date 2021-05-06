@@ -3,7 +3,11 @@ const INITIAL_STATE = {
         people: [],
         totalResults: 0
     },
-    person: []
+    person: {
+        personal: [],
+        credits : 0,
+        socialLinks : null,
+    }
 };
 
 export default (state = INITIAL_STATE , action) => {
@@ -13,10 +17,14 @@ export default (state = INITIAL_STATE , action) => {
         people: action.payload.data,
         totalResults: action.payload.totalResults
       }
-
         return {...state, popularPeople: popularPeople }
     }else if(action.type == 'GET_PERSON_DETAILS'){
-        return {...state, person: action.payload}
+         const person = {
+                personal: action.payload.data,
+                credits: action.payload.credit,
+                socialLinks: action.payload.socialLinks,
+              }
+        return {...state, person: person}
     }else{
              return state;
          }

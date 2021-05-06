@@ -58,7 +58,7 @@ const GetTrending = (props) => {
                     {trendingOptions}
                 </div>
             </div>
-            <div className="popular_page_content">
+            <div id='growth' className="popular_page_content">
                 {list}
             </div>
         </div>

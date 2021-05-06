@@ -15,7 +15,7 @@ const DropdownMenu = ({ name }) => {
            return(
                <Menu.Item>
                   <Link to='/person'>
-                      {ele}
+                     <h5> {ele}</h5>
                   </Link>
                </Menu.Item>
            );
@@ -23,7 +23,7 @@ const DropdownMenu = ({ name }) => {
            return(
                <Menu.Item>
                    <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                       {ele}
+                      <h5> {ele}</h5>
                    </a>
                </Menu.Item>
            );

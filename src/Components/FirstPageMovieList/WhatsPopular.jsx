@@ -56,7 +56,7 @@ const WhatsPopular = (props) => {
                     {list}
                 </div>
             </div>
-            <div className="popular_page_content">
+            <div id='growth' className="popular_page_content">
                 {popularList}
             </div>
         </div>

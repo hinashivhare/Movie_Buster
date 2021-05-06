@@ -85,10 +85,18 @@ export const getPopularPeopleAction = pageNo => {
 export const personDetailsAction = id => {
     return async (dispatch) => {
         const response = await axios.get(`https://api.themoviedb.org/3/person/${id}?api_key=${KEY}`);
+        const creditResponse = await axios.get(`https://api.themoviedb.org/3/person/${id}/combined_credits?api_key=${KEY}`)
+        const linksResponse = await axios.get(`https://api.themoviedb.org/3/person/${id}/external_ids?api_key=${KEY}`);
         const data = response.data;
+        const creditData = creditResponse.data.cast.length + creditResponse.data.crew.length;
+        const linkData = linksResponse.data;
         dispatch({
             type: 'GET_PERSON_DETAILS',
-            payload: data
+            payload: {
+                data: data,
+                credit: creditData,
+                socialLinks: linkData,
+            }
         })
     }
 

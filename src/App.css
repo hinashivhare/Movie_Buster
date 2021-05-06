@@ -111,7 +111,7 @@
     margin: 20px 0px 40px 700px;
 }
 .person_details_page{
-    margin: 0 60px 0 60px;
+    margin: 50px 60px 0 60px;
 }
 .Person_details_menu Button{
     font-size: 35px;
@@ -122,4 +122,13 @@
     border-bottom: black solid 1px;
     text-align: center;
 
+}
+.person_details div{
+    margin-bottom: 50px;
+}
+.person_details h4{
+    font-weight: bold;
+}
+#growth{
+    overflow-x: scroll;
 }

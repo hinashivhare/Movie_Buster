@@ -8,7 +8,6 @@ import {Card, Pagination} from "antd";
 
 const Person = (props) => {
     const {Meta} = Card;
-
     const handleCardClick = person => {
         const personName = person.name.split(' ')
         props.history.push({

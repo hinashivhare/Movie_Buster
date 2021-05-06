@@ -4,6 +4,7 @@ import FirstPage from "./FirstPage";
 import Search from './Search'
 import Person from "./People/Person";
 import PersonDetails from "./People/PersonDetails";
+import EditPage from "./People/EditPage";
 
 
 const Router = () => {
@@ -14,7 +15,8 @@ const Router = () => {
                 <Route exact  path='/' component={FirstPage}/>
                 <Route path='/search' component={Search}/>
                 <Route exact path='/person' component={Person}/>
-                <Route path='/person/:id' component={PersonDetails}/>
+                <Route exact path='/person/:id' component={PersonDetails}/>
+                <Route path='/person/:id/edit' component={EditPage}/>
             </Switch>
         </div>
     );
